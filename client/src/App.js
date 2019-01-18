@@ -72,15 +72,16 @@ class App extends Component {
         
         return (
             <BrowserRouter>
-                <StripeProvider apiKey="pk_live_kKjpQbj7ztAT5dMORwYYl0UQ">
+               
 
                 <AuxWrapper>
+                    <Route  path="/" render={(props) => <SocialAuth {...props} loggedIn={this.state.loggedIn} user={this.state.user} />} />
                    <Route exact  path="/boost"  render={(props) => <CourseView {...props} loggedIn={this.state.loggedIn} user={this.state.user}  />} />
                     <Route exact path="/boost/:courseId/:courseName/:lessonNumber" render={(props) => <LessonView {...props} loggedIn={this.state.loggedIn} user={this.state.user}  />} />
                     <Route exact path="/social-auth" render={(props) => <SocialAuth {...props} loggedIn={this.state.loggedIn} user={this.state.user} />} />
                     <Route exact path="/payments" render={(props) => <Payments {...props} loggedIn={this.state.loggedIn} user={this.state.user} />} />
                    </AuxWrapper>
-                </StripeProvider>
+               
 
 
                    {/* <AuxWrapper>

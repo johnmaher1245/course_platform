@@ -13,6 +13,8 @@ module.exports = function(app) {
     app.use(proxy('/api/*', { target: 'http://localhost:5000' }))
     app.use(proxy('/api/lessons', { target: 'http://localhost:5000' }))
     app.use(proxy('/api/courses', { target: 'http://localhost:5000' }))
+
+    app.use(proxy('/payments/stripe/charge', { target: 'http://localhost:5000' }))
     // app.use(proxy('/db/users/*', { target: 'http://localhost:5000' }))
     app.use(proxy('/db/users/*', { target: 'http://localhost:5000' }))
     app.use(proxy('/db/information/*', { target: 'http://localhost:5000' }))

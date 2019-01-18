@@ -4,14 +4,16 @@ import './CourseView.css';
 import DashboardWrapper from '../../components/DashboardWrapper';
 import Loader from '../../components/Loader';
 import RequireLogin from '../../components/RequireLogin';
+import RequireSubscription from '../../components/RequireSubscription';
 import Axios from 'axios';
 
 import CourseCard from '../../components/Courses/CourseCard';
-import CheckoutForm from '../../components/Stripe/CheckoutForm';
+// import CheckoutForm from '../../components/Stripe/CheckoutForm';
 
 
 import { MobileHeader } from '../../components';
-import {Elements, StripeProvider} from 'react-stripe-elements';
+// import {Elements, StripeProvider} from 'react-stripe-elements';
+
 
 
 const MainFrame = props => {
@@ -79,12 +81,17 @@ class CourseView extends Component {
       
       <RequireLogin user={this.props.user} loggedIn={this.props.loggedIn}>
 
+        <RequireSubscription user={this.props.user}>
+
         {(!this.state.loaded) ? <Loader></Loader> : ''}
         
         <DashboardWrapper user={this.props.user}>
             <MainFrame courses={this.state.courses} loaded={this.state.loaded} />
         </DashboardWrapper>
 
+
+        </RequireSubscription>
+       
       </RequireLogin>
     )
   }

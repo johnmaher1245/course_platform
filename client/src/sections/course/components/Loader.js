@@ -7,7 +7,7 @@ class Loader extends Component  {
     
     //   const { loadingCircle } = props;
     return (
-      <div className="flex column justify-center align-center w-100 h-100">
+      <div className="loaderContainer flex column justify-center align-center w-100 h-100">
         <img style={{marginBottom: '20px'}}  src={Logo} alt="loader"/>
         <div className='loader'></div>
       </div>

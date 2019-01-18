@@ -1,0 +1,36 @@
+.checkout {
+    background: white;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    background: #101012;
+    color: white;
+}
+
+.CardField.CardField--ltr {
+    background: white !important;
+}
+
+.card-element {
+    padding: 11.4px 12px;
+    background: white;
+}
+
+.checkout button {
+    background: #151519;
+    color: #74df68;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 3px;
+    border: none;
+}
+
+.checkout .text-right {
+    text-align: right;
+}
+
+.checkout #stripeCardError {
+    color: red;
+    margin-bottom: 10px;
+    font-size: 12px;
+}

@@ -6,10 +6,10 @@ const userSchema = new Schema({
     facebookId: String,
     givenName: String,
     familyName: String,
-    type: Number,
     picture: String,
-    credits: {
-        default: 0
+    activeSubscription: {
+        default: 0,
+        type: Number
     }
 });
 

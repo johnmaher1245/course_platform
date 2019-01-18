@@ -71,7 +71,8 @@ passport.use( new GoogleStrategy({
         googleId: googleId,
         givenName: givenName,
         familyName: familyName,
-        picture: picture 
+        picture: picture,
+        activeSubscription: 0
     }) .save()
 
     
@@ -121,7 +122,8 @@ passport.use(new FacebookStrategy({
         facebookId: facebookId,
         givenName: givenName,
         familyName: familyName,
-        picture: picture
+        picture: picture,
+        activeSubscription: 0
     }) .save()
     
     done(null, user);

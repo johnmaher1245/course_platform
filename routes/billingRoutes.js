@@ -2,25 +2,50 @@ const keys = require('../config/keys');
 const stripe = require('stripe')(keys.stripeSecretKey);
 const requireLogin = require('../middlewares/requireLogin');
 
+const mongoose = require('mongoose');
+const User = mongoose.model('users');
+// const stripe = require("stripe")("sk_test_fIL6i10JUpGLtqN3Q7xukvdG");
+
+
+
 module.exports = app => {
 
-    app.post('/api/stripe', requireLogin, async (req, res) => {
+    app.post("/payments/stripe/charge", async (req, res) => {
+        try {
 
-        const charge = await stripe.charges.create({
-            amount: 500,
-            currency: 'usd',
-            description: '$ for 5 credits',
-            source: req.body.id
-        });
+          console.log(`made it`);
+          
+          let {status} = await stripe.charges.create({
+            amount: 2000,
+            currency: "usd",
+            description: "An example charge",
+            source: req.body.tokenId
+          });
 
-        //req.user is assigned by passport
-        //req.user is the current user through passport
-        req.user.credits += 5;
-        const user = await req.user.save();
+          console.log('status', status);
+          console.log('error', status.error);
+          
 
-        res.send(user);
-        
+          req.user.activeSubscription = 1;
+          const user = await req.user.save();
+      
+          res.json({
+            success: true,
+            message: ''
+          });
+        } catch (err) {
+          
+          console.log('error message', err.message);
+          
+          res.send(JSON.stringify({
+            success: false,
+            message: err.message
+          }));
+          
+        }
 
-    });
+      });
+
+    
 
 };

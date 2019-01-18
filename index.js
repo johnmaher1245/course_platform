@@ -39,6 +39,7 @@ app.use(
 //app.use adds middleware for every route handler
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(require("body-parser").text());
 
 //call the authentication routes with the app const
 require('./routes/authRoutes')(app);
