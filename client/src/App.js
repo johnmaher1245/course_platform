@@ -75,7 +75,7 @@ class App extends Component {
                
 
                 <AuxWrapper>
-                    <Route  path="/" render={(props) => <SocialAuth {...props} loggedIn={this.state.loggedIn} user={this.state.user} />} />
+                    <Route  path="/" render={(props) => <SocialAuth {...props} />} />
                    <Route exact  path="/boost"  render={(props) => <CourseView {...props} loggedIn={this.state.loggedIn} user={this.state.user}  />} />
                     <Route exact path="/boost/:courseId/:courseName/:lessonNumber" render={(props) => <LessonView {...props} loggedIn={this.state.loggedIn} user={this.state.user}  />} />
                     <Route exact path="/social-auth" render={(props) => <SocialAuth {...props} loggedIn={this.state.loggedIn} user={this.state.user} />} />
