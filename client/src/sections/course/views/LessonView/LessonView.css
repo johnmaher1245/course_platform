@@ -1,0 +1,446 @@
+.boost-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Drawer Classes */
+
+.drawer {
+  min-width: 212px;
+  max-width: 212px;
+  min-height: 500px;
+  background-color: #101012;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.drawer-title-img-cont {
+  height: 35.8px;
+
+  margin-bottom: 77px;
+}
+
+.drawer-title-img {
+  height: 100%;
+}
+
+.drawer-item-buttons {
+  display: flex;
+  flex-direction: column;
+}
+.drawer-item-group {
+  padding-bottom: 34px;
+  display: flex;
+  align-items: center;
+}
+
+.drawer-item-text {
+  padding-left: 15.3px;
+  width: 53px;
+  height: 21px;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  color: #74df68;
+}
+
+.drawer-profile {
+  display: flex;
+  position: absolute;
+  bottom: 36px;
+  padding-left: 32px;
+}
+
+.drawer-profile-pic-cont {
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+.drawer-profile-pic {
+  width: 100%;
+  height: 100%;
+}
+
+.drawer-user-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 14px;
+}
+
+.drawer-username {
+  width: 72px;
+  height: 21px;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.drawer-logout {
+  width: 37px;
+  height: 16px;
+  opacity: 0.64;
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: #778087;
+}
+
+/* Mainframe */
+
+.mainframe-container {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  min-height: 500px;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  padding-bottom: 30px;
+}
+
+.mainframe-boost-banner {
+  position: relative;
+  background-color: red;
+  flex: 1;
+  width: 100%;
+  min-height: 611px;
+  max-height: 611px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainframe-banner {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background: black;
+}
+
+.mainframe-boost-info {
+  background-color: #151519;
+
+  min-height: 200px;
+  width: 100%;
+}
+
+.mainframe-boost-metadata {
+  justify-content: center;
+  width: 100%;
+  margin-top: 26px;
+}
+
+.mainframe-boost-week {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+}
+.mainframe-boost-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+}
+
+.divider {
+  margin-left: 79px;
+  margin-right: 79px;
+  height: 56px;
+  border: 0.5px solid #242424;
+  background-color: 'red';
+}
+
+.mainframe-banner-title-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 50%;
+  left: 50%;
+}
+
+.mainframe-banner-title {
+  width: 100%;
+  height: 100%;
+}
+
+.boost-week-num {
+  width: 29px;
+  height: 21px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  font-family: Montserrat;
+  font-size: 44px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.48;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.boost-week-string {
+  width: 65px;
+  height: 21px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  font-family: Montserrat;
+  font-size: 11px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.91;
+  letter-spacing: normal;
+  text-align: center;
+  color: #778087;
+  padding-top: 7px;
+}
+
+.mainframe-boost-pic-cont {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.mainframe-boost-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mainframe-boost-name {
+  width: 84px;
+  height: 21px;
+  font-family: Montserrat;
+  font-size: 11px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.91;
+  letter-spacing: normal;
+  text-align: center;
+  color: #778087;
+}
+
+.main-frame-boost-desc {
+  padding-top: 28px;
+  flex: 1;
+  max-width: 100vw;
+  margin-left: 67px;
+  margin-right: 69px;
+  padding-bottom: 40px;
+}
+
+.main-frame-boost-lesson {
+  border-top: 1px solid #242424;
+  background: #151519;
+  min-height: 91px;
+}
+
+.main-fram-boost-lesson-img {
+  width: 60px;
+  height: 60px;
+
+  margin: 0 27px 0 67px;
+  border-radius: 5px;
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
+}
+
+.main-fram-boost-lesson-title {
+  /* width: 102px; */
+  height: 21px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.main-fram-boost-lesson-lesson-num {
+  width: 53px;
+  height: 16px;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #aab2b7;
+}
+
+.course-desc-string {
+  width: 312px;
+  height: 130px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.62;
+  letter-spacing: normal;
+  color: #778087;
+}
+
+/* LESSON */
+
+.main-lesson-desc {
+  padding: 46px 67px 0;
+  background: #151515;
+  min-height: 295px;
+}
+
+.main-lesson-course-desc {
+  margin: 0 0 48px 0;
+}
+
+.main-lesson-info {
+  margin: 16px 0 24px 0;
+}
+
+.main-lesson-count {
+  width: auto;
+  color: white;
+  margin: 0 25px 0 0;
+}
+.main-lesson-time {
+  width: auto;
+  color: white;
+  margin: 0 25px 0 0;
+}
+
+.main-lesson-company {
+  width: auto;
+  color: white;
+}
+
+.main-fram-boost-lesson-button {
+  width: 315px;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(99deg, #74ee75, #21d06d);
+  cursor: pointer;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  text-align: center;
+  border: none;
+  align-self: center;
+
+
+}
+
+.main-lesson-lesson-count {
+  width: 90px;
+  height: 21px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.main-lesson-company-title-container {
+  width: 0;
+  height: 0;
+}
+
+.main-lesson-company-title {
+  font-size: 0;
+}
+
+.main-lesson-title {
+  width: 227px;
+  height: 34px;
+  font-family: Montserrat;
+  font-size: 35px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.97;
+  letter-spacing: normal;
+  color: #74df68;
+}
+
+@media (max-width: 712px) {
+  .main-frame-boost-desc {
+    margin: 0 32px;
+    height: 130px;
+  }
+
+  .main-fram-boost-lesson-img {
+    margin: 16px 18px 16px 27px;
+  }
+  .mainframe-banner {
+    max-height: 382px;
+  }
+  .mainframe-boost-banner {
+    max-height: 382px;
+    min-height: 382px;
+  }
+  .divider {
+    margin: 0 45px;
+  }
+
+  .main-lesson-desc {
+    padding: 38px 30px;
+  }
+
+  .main-lesson-company-title-container {
+    width: 100%;
+    min-height: 60px;
+    text-align: center;
+    background: #151515;
+  }
+
+  .main-lesson-company-title {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 800;
+
+    text-transform: uppercase;
+  }
+  .main-lesson-company {
+    width: 0;
+    color: white;
+    height: 0;
+    font-size: 0;
+  }
+}

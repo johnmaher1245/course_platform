@@ -1,0 +1,3 @@
+get all process running on server and kill
+sudo lsof -i :5000
+kill -9 {pid}

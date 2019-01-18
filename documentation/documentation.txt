@@ -1,0 +1,11 @@
+Passport Documentation
+http://www.passportjs.org/docs/
+
+Babel Js
+https://babeljs.io/docs/en/
+
+Redux
+https://redux.js.org/
+
+Materialize CSS
+https://materializecss.com/
