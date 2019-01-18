@@ -8,7 +8,7 @@ const AuthButton = props => {
      <img style={{left: '16px'}} className='absolute' src={googleIcon} alt="google logo"></img><span>Login with Google</span>
     </a>
   ) : (
-    <a  href="/auth/facebook" className="relative facebook-button flex row align-center" style={{justifyContent: 'center'}}
+    <a  href="/auth/facebook" className="relative facebook-button flex row align-center" style={{justifyContent: 'center'}} >
       <img style={{left: '16px'}} className='absolute' src={facebookIcon} alt="facebook logo"></img><span>Login with Facebook</span>
     </a>
   );
