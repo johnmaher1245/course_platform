@@ -24,6 +24,7 @@ const MainFrame = props => {
     const cards = props.courses.map(function(data) { 
       
       return <CourseCard
+      link={"/boost/" + data._id + "/" + data.name + '/1'} 
         key={data._id}
         courseId={data._id}
         picture={data.picture}
@@ -46,7 +47,7 @@ const MainFrame = props => {
       <div className="main-frame-header">
         <span className="main-frame-header-text">Boosts</span>
       </div>
-      <MobileHeader titleText="Boosts" />
+      <MobileHeader user={props.user} titleText="Boosts" />
       <div className="main-frame-grid-cont">
         {courseCards()}
       </div>
@@ -86,7 +87,7 @@ class CourseView extends Component {
         {(!this.state.loaded) ? <Loader></Loader> : ''}
         
         <DashboardWrapper user={this.props.user}>
-            <MainFrame courses={this.state.courses} loaded={this.state.loaded} />
+            <MainFrame user={this.props.user} courses={this.state.courses} loaded={this.state.loaded} />
         </DashboardWrapper>
 
 

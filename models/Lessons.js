@@ -11,4 +11,4 @@ const lessonSchema = new Schema({
     description: String
 });
 
-mongoose.model('lessons', lessonSchema);
+mongoose.model('lessons', lessonSchema); 

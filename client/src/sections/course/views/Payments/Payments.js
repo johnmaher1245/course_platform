@@ -143,7 +143,7 @@ class CourseView extends Component {
             <div className="main-frame-header">
                 <span className="main-frame-header-text">Payments</span>
             </div>
-            <MobileHeader titleText="Payments" />
+            <MobileHeader user={this.props.user} titleText="Payments" />
             <div className="main-content-no-grid" style={{marginTop: '190px'}}>
                 <div>
                 </div>

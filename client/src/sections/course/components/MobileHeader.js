@@ -29,7 +29,7 @@ class mobileHeader extends Component{
                     <div className="burger-icon" onClick={() => this.showMobileMenuHandler()}>
                     <div className="burger" />
                     <div className="burger" />
-                    <div className="burger" />
+                    <div className="burger" /> 
                     <div
                         className={`${
                         this.state.mobileMenuShow ? 'mobile-view-menu-show' : 'mobile-view-menu'
@@ -64,7 +64,7 @@ class mobileHeader extends Component{
                         <div className="drawer-item-profile-mobile">
                          <a href="/api/logout">
                             <div className="drawer-item-profile-pic">
-                                <img className="drawer-item-profile-pic" src={profilePicOne} alt="profile icon" />
+                                <img className="drawer-item-profile-pic" src={this.props.user.picture} alt="profile icon" />
                             </div>
                         </a>
                         <a href="/api/logout">

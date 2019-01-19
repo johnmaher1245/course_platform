@@ -48,6 +48,7 @@ const MainLesson = (props) => {
           height="100%"
           className="mainframe-banner"
           url={props.currentLesson.video}
+          controls={true}
           playing
         />
       </div>
@@ -149,7 +150,7 @@ class LessonView extends React.Component {
     return (
       // <Loader/>
       <RequireLogin loggedIn={this.props.loggedIn}>
-         <MobileHeader titleText="" />
+         <MobileHeader user={this.props.user} titleText="" />
         <div className="boost-container">
           <Drawer user={this.props.user}/>
           <div className="mainframe-container">

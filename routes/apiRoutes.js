@@ -207,26 +207,48 @@ module.exports = app => {
 
     });
 
-    // app.post('/api/courses/update', async (req, res,) => {
+    app.post('/api/lessons/update', async (req, res,) => {
 
-    //     const body = _.pick(req.body, ['courseId', 'name', 'picture', 'author', 'authorPicture', 'time']);
+        
+        const body = _.pick(req.body.lessonFields, ['name', 'description', 'video', 'videoThumbnail', 'worksheet', 'lessonNumber']);
 
-    //     console.log('body', body);
+        let lessonId = _.pick(req.body.lessonFields, ['lessonId']);
+        lessonId = lessonId.lessonId
+        console.log(body);
+        
+        console.log(`body.name`, body.name);
+        
+
+        try {
+            const updatedLesson = await Lessons.findByIdAndUpdate({
+                _id: lessonId
+            }, {
+            $set: { 
+                name: body.name,
+                description: body.description,
+                video: body.video,
+                videoThumbnail: body.videoThumbnail,
+                worksheet: body.worksheet,
+                lessonNumber: body.lessonNumber,
+
+             }
+            }, {
+                new: true
+            })
+    
+            console.log('updatedlesson', updatedLesson);
+            
+            res.send(JSON.stringify(updatedLesson))
+        } catch (e) {
+            console.log(`failed`, e);
+            
+            res.send(JSON.stringify(e))
+        }
+
+    });
         
         
-    //     const updatedCourse = await Courses.findOneAndUpdate({
-    //         _id: body.courseId,
-    //     }, {
-    //     $set: { 
-    //         name: body.name,
-    //         picture: body.picture,
-    //         author: body.author,
-    //         authorPicture: body.authorPicture,
-    //         time: body.time
-    //     }
-    //     }, {
-    //         new: true
-    //     })
+        
 
 
     //     console.log('updatedCourse', updatedCourse);

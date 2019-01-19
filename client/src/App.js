@@ -37,6 +37,10 @@ import CourseView from './sections/course/views/CourseView';
 import LessonView from './sections/course/views/LessonView';
 import Payments from './sections/course/views/Payments/Payments';
 
+import AdminLessonUpdate from './sections/course/views/Admin/LessonUpdate/LessonUpdate';
+import AdminLessonSelect from './sections/course/views/Admin/LessonSelect/LessonSelect';
+import AdminCourseSelect from './sections/course/views/Admin/CourseSelect/CourseSelect';
+
 
 
 class App extends Component { 
@@ -78,17 +82,16 @@ class App extends Component {
                     <Route exact path="/" render={(props) => <SocialAuth {...props} />} />
                    <Route exact  path="/boost"  render={(props) => <CourseView {...props} loggedIn={this.state.loggedIn} user={this.state.user}  />} />
                     <Route exact path="/boost/:courseId/:courseName/:lessonNumber" render={(props) => <LessonView {...props} loggedIn={this.state.loggedIn} user={this.state.user}  />} />
+
                     <Route exact path="/social-auth" render={(props) => <SocialAuth {...props} loggedIn={this.state.loggedIn} user={this.state.user} />} />
+
                     <Route exact path="/payments" render={(props) => <Payments {...props} loggedIn={this.state.loggedIn} user={this.state.user} />} />
-                   </AuxWrapper>
+
+                    <Route exact path="/admin/lesson/update/:lessonId" render={(props) => <AdminLessonUpdate {...props} loggedIn={this.state.loggedIn} user={this.state.user} />} />
+                    <Route exact path="/admin/lesson/select/:courseId" render={(props) => <AdminLessonSelect {...props} loggedIn={this.state.loggedIn} user={this.state.user} />} />
+                    <Route exact path="/admin/course/select/" render={(props) => <AdminCourseSelect {...props} loggedIn={this.state.loggedIn} user={this.state.user} />} />
+                </AuxWrapper>
                
-
-
-                   {/* <AuxWrapper>
-                   <Route exact  path="/boost"  render={(props) => <CourseView {...props} loggedIn={this.state.loggedIn} user={this.state.user}  />} />
-                    <Route exact path="/boost/:courseId/:courseName/:lessonNumber" render={(props) => <LessonView {...props} loggedIn={this.state.loggedIn} user={this.state.user}  />} />
-                    <Route exact path="/social-auth" render={(props) => <SocialAuth {...props} loggedIn={this.state.loggedIn} user={this.state.user} />} />
-                   </AuxWrapper> */}
                     
             </BrowserRouter>
         );

@@ -32,6 +32,20 @@ const Drawer = props => {
             
           </div>
         </Link>
+        {/* <Link to="/admin/course/select">
+        <div className="drawer-item-cont">
+          <img
+            src={SupportIcon}
+            srcSet={`
+              ${require('../../../../assets/icons/supporticon@2x.png')} 2x,
+              ${require('../../../../assets/icons/supporticon@3x.png')} 3x
+            `}
+            className="support-icon"
+            alt="support icon"
+          />
+          <span className="drawer-item-text-support">Courses</span>
+        </div>
+        </Link> */}
         <div className="drawer-item-cont">
           <img
             src={SupportIcon}

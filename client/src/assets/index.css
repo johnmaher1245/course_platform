@@ -14,6 +14,10 @@ body {
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 
+a {
+  text-decoration: none;
+}
+
 button:focus {
   outline: none;
 }
@@ -36,6 +40,97 @@ button:focus {
   height: 400px;
   padding-right: 50px;
 }
+
+.main-content-no-grid {
+  width: 100%;
+  margin-top: 190px;
+  color: white;
+  padding-bottom: 50px;
+}
+
+.bg-black {
+  background: #101012;
+}
+
+
+.bg-gray {
+  background: #151519;
+}
+
+.box {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.input-standard {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  padding-right: 0;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: none;
+}
+
+textarea.input-standard {
+  min-height: 100px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.btn {
+  padding: 8px 16px;
+  background: #101012;
+  color: #74DF62;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.alert {
+  padding: 12px 20px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  font-weight: bold
+}
+
+.alert.alert-success {
+  background: linear-gradient(to bottom right, #74DF62, green);
+  
+}
+
 
 /* .BoostView-boostCont-5 {
   overflow: scroll;
